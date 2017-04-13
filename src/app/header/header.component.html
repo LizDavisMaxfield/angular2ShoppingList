@@ -1,0 +1,12 @@
+<h2>
+  Meal Planning App!
+</h2>
+<button (click)="selectPage('shoppingList')"> Shopping List </button>
+<button (click)="selectPage('recipeBook')"> Recipe Book </button>
+<div *ngIf="page == 'recipeBook'; else shoppingList">
+  <app-recipe-book></app-recipe-book>
+  </div>
+<ng-template #shoppingList>
+  <app-shopping-list></app-shopping-list>
+  </ng-template>
+
