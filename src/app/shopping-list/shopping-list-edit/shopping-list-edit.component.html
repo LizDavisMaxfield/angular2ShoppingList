@@ -1,0 +1,18 @@
+<div class="row">
+  <div class="col-xs-12">
+    <form>
+      <div class="row">
+        <div class="col-sm-4 form-group">
+          <label for="unit">Unit</label>
+          <input [(ngModel)]="ingredient.unit" type="text" id="unit" class="form-control">
+        </div>
+        <div class="col-sm-4 form-group">
+          <label for="name">Name</label>
+          <input [(ngModel)]="ingredient.name" type="text" id="name" class="form-control">
+        </div>
+        <div class="col-sm-2 form-group">
+          <label for="amount">Amount</label>
+          <input [(ngModel)]="ingredient.amount" type="number" id="amount" class="form-control">
+        </div>
+      </div>
+        <button [disabled]="!ingredient" (click)="addIngredient(ingredient)" class="btn btn-primary">Add Ingredient</button>

@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./shopping-list-edit.component.css']
 })
 export class ShoppingListEditComponent implements OnInit {
-
+  ingredients;
   constructor() { }
 
   ngOnInit() {
   }
+
+addIngredient(ingredient) {
+  this.ingredients.push(ingredient);
+}
 
 }

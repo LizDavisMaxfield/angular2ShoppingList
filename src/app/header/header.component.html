@@ -1,12 +1,32 @@
-<h2>
-  Meal Planning App!
-</h2>
-<button (click)="selectPage('shoppingList')"> Shopping List </button>
-<button (click)="selectPage('recipeBook')"> Recipe Book </button>
+<nav class="navbar navbar-default">
+  <div class="containter-fluid">
+    <div class="navbar-header">
+      <span class="navbar-brand">Meal Planning App!</span>
+    </div>
+    <div class="navbar-default">
+      <ul class="nav navbar-nav">
+        <li><a href="#" class="navbar-brand" (click)="selectPage('shoppingList')"> Shopping List </a></li>
+        <li><a href="#" class="navbar-brand" (click)="selectPage('recipeBook')"> Recipe Book </a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle">Manage<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Edit</a></li>
+            <li><a href="#">Save</a></li>
+            <li><a href="#">Delete</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="row">
 <div *ngIf="page == 'recipeBook'; else shoppingList">
   <app-recipe-book></app-recipe-book>
-  </div>
+</div>
 <ng-template #shoppingList>
   <app-shopping-list></app-shopping-list>
-  </ng-template>
+</ng-template>
+</div>
 
